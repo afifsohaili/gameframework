@@ -16,7 +16,7 @@ The main design pattern that is used in this game framework is the **Model View 
   - updateUI(String[][])
 - More on the implementation of the UserInterface interface will be discussed later.
 - The UML diagram for the framework are as follows:
-![alt tag](https://github.com/afifsohaili/gameframework/uml.png)
+![alt tag](https://github.com/afifsohaili/gameframework/blob/master/uml.png)
 
 ##Design rationale
 - The main design pattern that is used for the game framework is the observer pattern or **Model-View-Controller (MVC)** pattern. MVC pattern will allow game developers to have a clear separation of the codes for the game's logic, data, and user interface. It will help organize the codes better.
