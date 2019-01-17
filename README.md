@@ -1,10 +1,10 @@
-#gameframework
+# gameframework
 
-##Introduction
+## Introduction
 This is a game framework for creating grid-based games, such as Shokoban, Sudoku, Bejeweled, etc.
 It is written in Java.
 
-##Overview
+## Overview
 The main design pattern that is used in this game framework is the **Model View Controller (MVC)** pattern.
 - The model is represented by the `Grid` abstract class that contains a two-dimensional array (resembling a table or a grid) that stores instances of a class that implements the `Data` interface.
 - The controller is represented by the `Mechanics` abstract class. The class connects all the elements of the framework together:
@@ -18,7 +18,7 @@ The main design pattern that is used in this game framework is the **Model View 
 - The UML diagram for the framework are as follows:
 ![alt tag](https://github.com/afifsohaili/gameframework/blob/master/uml.png)
 
-##Design rationale
+## Design rationale
 - The main design pattern that is used for the game framework is the observer pattern or **Model-View-Controller (MVC)** pattern. MVC pattern will allow game developers to have a clear separation of the codes for the game's logic, data, and user interface. It will help organize the codes better.
 - **Strategy pattern** are used in the game framework as well. `Data` and `UserInterface` are both interfaces that require concrete implementations by the game developers, and the game developers are given the freedom to implement the method signatures inside these two interfaces according to their own needs and likings. The `Mechanics` class will use these signatures to run the game, update the user interface and display errors.
 - Template method pattern are also used in the framework.
@@ -28,7 +28,7 @@ The main design pattern that is used in this game framework is the **Model View 
 - Apart from the abstract methods, `Mechanics` will handle the initialization and performs minimal data validation on the model (`Grid`) before the game runs. The class is also the one responsible in getting all the defined options in the options file, and it is the one that moderate the communications between the `UserInterface` and the `Grid`.
 - `Grid` is an abstract class that stores the game data. The implementation of the `updateGrid(String... update)` method is required to allow `Mechanics` class to interact with the `Grid` and allow the `UserInterface` to update itself accordingly.
 
-##Using the framework
+## Using the framework
 
 **I. Implement the `Data` interface**
 This is a framework meant to create grid-based games, so each of your tiles will contain some kind of data. e.g. each tiles in a Sudoku game will contain a number, and each tiles in a Bejeweled game will contain a color. 
